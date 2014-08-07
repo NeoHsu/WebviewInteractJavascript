@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <script language="javascript" type="text/javascript">
+    function setOptions() {
+        var data = android.getData();
+        var mTitleOptions = JSON.parse(data);
+        var mValueOptions = JSON.parse(data);
+        var i = 0,
+            s = document.getElementById('city2');
+        for (i = 0; i < mTitleOptions.length; i++) {
+            var newOption = new Option(mTitleOptions[i], mValueOptions[i]);
+            s.options.add(newOption);
+        };
+    }
+
+    function changeType() {
+        var mType = document.getElementById("type");
+        if (mType.options[mType.selectedIndex].value !== "Choose a Person Type") {
+            mElement.elementDisabledOff();
+        } else {
+            mElement.elementDisabledOn();
+        }
+    }
+    </script>
+</head>
+
+<body>
+
+    <select style="font-size: 18px" name="city2" id="city2">
+
+    </select>
+    <script>
+    setOptions();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+.gradle
+/local.properties
+/.idea/workspace.xml
+.DS_Store
+/build
+
+# Android Studio
+.idea
+*.iml
+
+# Gradle
+.gradle
+build
+local.properties
+
+# OS X
+.DS_Store
