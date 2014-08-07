@@ -15,7 +15,7 @@ import java.util.Arrays;
 
 public class MyActivity extends ActionBarActivity {
     WebView webview;
-    String mStringArray[] = { "String1", "String2" };
+    String mStringArray[] = { "Keelung","Taipei","Kaohsiung","Hualien","Yunlin","Nantou","Taoyuan","Chiayi","Hsinchu","Tainan","Panchiao","Ilan","Taitung","Miaoli","Taichung","Changhua","Pingtung","Penghu","Green Island","Orchid Island","Cimei","Magong","Mazu","Kinmen" };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh-TW">
 <head>
-    <title></title>
+    <title>Webview_Interact_JavaScript</title>
     <script language="javascript" type="text/javascript">
+    var mTitleOptions
+
     function setOptions() {
         var data = android.getData();
-        var mTitleOptions = JSON.parse(data);
+        mTitleOptions = JSON.parse(data);
         var mValueOptions = JSON.parse(data);
         var i = 0,
             s = document.getElementById('city2');
@@ -16,26 +17,20 @@
         };
     }
 
-    function changeType() {
-        var mType = document.getElementById("type");
-        if (mType.options[mType.selectedIndex].value !== "Choose a Person Type") {
-            mElement.elementDisabledOff();
-        } else {
-            mElement.elementDisabledOn();
+    function changeOptions() {
+        var tmp = mTitleOptions.indexOf(document.getElementById('search').value);
+        if (tmp >= 0) {
+            document.getElementById('city2').options[tmp].selected = true;
         }
     }
     </script>
 </head>
-
-<body>
-
-    <select style="font-size: 18px" name="city2" id="city2">
-
-    </select>
-    <script>
-    setOptions();
-    </script>
-
-</body>
-
+    <body>
+        <input type="text" id="search" onkeyup="changeOptions()" />
+        <select style="font-size: 18px" name="city2" id="city2">
+        </select>
+        <script>
+        setOptions();
+        </script>
+    </body>
 </html>
